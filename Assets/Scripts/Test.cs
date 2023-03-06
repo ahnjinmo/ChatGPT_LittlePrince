@@ -4,10 +4,26 @@ using System.Collections.Generic;
 using ChatGPTWrapper;
 using UnityEngine;
 
+public enum Emotion
+{
+    neutral = 0,
+    happy = 1,
+    curious = 2,
+    sad = 3,
+    anger = 4,
+    fear = 5,
+    surprised = 6,
+    funny = 7,
+    laughing = 8
+}
+
 public class Test : MonoBehaviour
 {
     [SerializeField] 
     private ChatGPTConversation m_ChatGPTConversation;
+
+    [SerializeField] 
+    private Animator m_Animator;
     
     private string m_StringToEdit;
 
